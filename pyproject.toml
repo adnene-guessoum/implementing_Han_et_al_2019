@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "implementing-han-et-al-2019"
+version = "0.1.0"
+description = "simple reproduction of the RL approach to HFSP"
+authors = ["Adnene_wsl <adnen.guessoum@gmail.com>"]
+readme = "README.md"
+packages = [{include = "implementing_han_et_al_2019"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
