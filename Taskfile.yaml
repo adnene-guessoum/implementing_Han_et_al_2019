@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  install:
+    desc: Installs the dependencies.
+    cmds:
+      - poetry install --no-root
+
+  lint:
+    desc: Lints the code and report issues.
+    cmds:
+      - poetry run mypy src # --ignore-missing-imports
+      - poetry run black src
+      - poetry run flake8 src --show-source --statistics --count
+      - poetry run pylint src
