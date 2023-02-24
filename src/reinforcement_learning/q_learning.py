@@ -1,4 +1,6 @@
 """
+    TODO: re-enable pylint too manu argument rule
+
     Model for simple q-learning algorithm implementation in HFS context
 
     Han, Wei, Fang Guo, and Xichao Su. 2019. "A Reinforcement Learning Method
@@ -12,7 +14,10 @@ import pandas as pd
 
 
 class QTable:
-    # cf page 9 for default values
+    """
+    cf. page 9 for default values
+    """
+
     def __init__(
         self,
         actions: list,
@@ -21,7 +26,7 @@ class QTable:
         exploration_decay: float,
         learning_rate: float = 0.1,
         discount_factor: float = 0.9,
-    ):
+    ):  # pylint: disable=too-many-arguments
         self.actions = actions
         self.alpha = learning_rate
         self.gamma = discount_factor
@@ -32,6 +37,10 @@ class QTable:
         self.q_table = pd.DataFrame(columns=self.actions, dtype=np.float64)
 
     def action_selection(self, observation):
+        """
+        Choosing next machine as per the q_table and the exploration
+        exploitation trade-off.
+        """
         if np.random.uniform() < self.epsilon:
             q_lookup = self.q_table.loc[observation, :]
 
@@ -46,6 +55,10 @@ class QTable:
         return selected_action
 
     def update_q_table(self, state, action, reward, next_state):
+        """
+        Updating the q-table after allocation to next stage and received
+        reward.
+        """
         prediction = self.q_table.loc[state, action]
 
         # "goal" state in paper designates terminal state of an episode.
