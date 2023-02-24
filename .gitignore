@@ -86,3 +86,23 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+#Latex
+.aux
+.bit
+.blg
+.bbl
+.lof
+.log
+.lot
+.glo
+.glx
+.gxg
+.gxs
+.idx
+.ilg
+.ind
+.out
+.url
+.svn
+.toc
