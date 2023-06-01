@@ -36,7 +36,6 @@ class QTable:
 
         self.q_table = pd.DataFrame(columns=self.actions, dtype=np.float64)
 
-
     def action_selection(self, observation):
         """
         Choosing next machine as per the q_table and the exploration

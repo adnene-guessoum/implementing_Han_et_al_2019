@@ -1,10 +1,8 @@
 """
-	Set up the Hybrid flow shop environment to interact with as per
-	specifications in Han et al 2019 (cf. paper section 4 MDP framework for
-	HFSP.
+ Set up the Hybrid flow shop environment to interact with as per
+ specifications in Han et al 2019 (cf. paper section 4 MDP framework for
+ HFSP.
 """
-
-import numpy as np
 
 
 class Hfsp:
