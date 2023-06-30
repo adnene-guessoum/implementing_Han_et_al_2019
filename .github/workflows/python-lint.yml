@@ -20,8 +20,6 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
             # Load our cached dependencies to speed things up.
-            # You will get more motivation for this extra stuff
-            # one you waited minutes.
 
       - name: Load cached venv
         id: cached-poetry-dependencies

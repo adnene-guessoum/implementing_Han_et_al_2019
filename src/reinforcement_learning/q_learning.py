@@ -1,5 +1,5 @@
 """
-    TODO: re-enable pylint too manu argument rule
+    TODO: re-enable pylint too many argument rule
 
     Model for simple q-learning algorithm implementation in HFS context
 
